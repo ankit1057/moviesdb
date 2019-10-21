@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- video details screen-->
+    <dimen name="video_details_label_txt_size">12sp</dimen>
+    <dimen name="video_details_value_txt_size">10sp</dimen>
+    <dimen name="video_details_value_margin_start">10dp</dimen>
+    <dimen name="video_details_container_padding">15dp</dimen>
+    <dimen name="video_details_margin_top_space">10dp</dimen>
+    <dimen name="video_details_padding">15dp</dimen>
+    <!-- video_item all videos screen-->
+    <dimen name="video_item_container_margin">10dp</dimen>
+    <dimen name="video_item_img_margin">10dp</dimen>
+    <dimen name="video_item_title_margin_start">30dp</dimen>
+    <dimen name="video_item_title_txt_size">15sp</dimen>
+    <dimen name="video_item_desc_margin_top">10dp</dimen>
+    <dimen name="video_item_desc_margin_bottom">10dp</dimen>
+    <dimen name="video_item_desc_txt_size">12sp</dimen>
+    <dimen name="video_item_duration_txt_size">12sp</dimen>
+    <dimen name="video_item_duration_margin_start">10dp</dimen>
+    <dimen name="video_item_img_size">150dp</dimen>
+
+</resources>

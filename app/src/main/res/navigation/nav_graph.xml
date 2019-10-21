@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentAllVideos">
+
+    <fragment
+        android:id="@+id/fragmentAllVideos"
+        android:name="com.example.vod.main.ui.allvideos.views.FragmentAllVideos"
+        android:label="FragmentAllVideos" >
+        <action
+            android:id="@+id/action_fragmentAllVideos_to_fragmentVideoDetails"
+            app:destination="@id/fragmentVideoDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentVideoDetails"
+        android:name="com.example.vod.main.ui.videodetails.views.FragmentVideoDetails"
+        android:label="FragmentVideoDetails" >
+        <argument
+            android:name="video"
+            app:argType="com.example.vod.main.model.MovieModel" />
+    </fragment>
+</navigation>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">VOD</string>
+    <string name="all_videos">All Videos</string>
+    <string name="watched_videos">Watched Videos</string>
+
+    <!-- video details screen-->
+    <string name="video_details_duration_txt">Duration</string>
+    <string name="video_details_release_date_txt">Release Date</string>
+    <string name="video_details_format_txt">Format</string>
+    <string name="video_details_title_txt">Title</string>
+    <string name="video_details_description_txt">Description</string>
+    <string name="video_details_category_txt">Category</string>
+    <string name="votes_label">Votes</string>
+    <string name="error_no_internet_connection">No Internet Connection</string>
+    <string name="video_language_label">Language</string>
+</resources>

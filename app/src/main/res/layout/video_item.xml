@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="videoItem"
+            type="com.example.vod.main.model.MovieModel" />
+
+        <variable
+            name="videoAdapter"
+            type="com.example.vod.main.ui.allvideos.views.VideosAdapter" />
+    </data>
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(v) -> videoAdapter.onVideoInfoClicked(v,videoItem)}"
+        android:layout_margin="@dimen/video_item_container_margin">
+
+        <ImageView
+            android:id="@+id/videoThumbnailImg"
+            android:layout_width="@dimen/video_item_img_size"
+            android:layout_height="@dimen/video_item_img_size"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/video_item_img_margin"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:onClick="@{(v) -> videoAdapter.onVideoInfoClicked(v,videoItem)}"
+            app:srcUrl="@{videoItem.poster_path}"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/videoTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/video_item_title_margin_start"
+            android:layout_toEndOf="@+id/videoThumbnailImg"
+            android:text="@{videoItem.original_title}"
+            android:textSize="@dimen/video_item_title_txt_size"
+            android:textStyle="bold"
+            android:textColor="@color/video_title_color"
+            tools:text="sdasfdasfdsgfdsgdsgdsg" />
+
+        <TextView
+            android:id="@+id/videoDescriptionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/videoTitleTV"
+            android:layout_marginStart="@dimen/video_item_title_margin_start"
+            android:layout_marginTop="@dimen/video_item_desc_margin_top"
+            android:paddingBottom="@dimen/video_item_desc_margin_top"
+            android:layout_toEndOf="@+id/videoThumbnailImg"
+            android:layout_above="@+id/durationTV"
+            android:text="@{videoItem.overview}"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:textSize="@dimen/video_item_desc_txt_size"
+            tools:text="sdasfdasfdsgfdsgdsgdsg" />
+
+        <TextView
+            android:id="@+id/durationTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/videoThumbnailImg"
+            android:layout_marginStart="@dimen/video_item_title_margin_start"
+            android:layout_toEndOf="@+id/videoThumbnailImg"
+            android:text="@{videoItem.release_date}"
+            android:textColor="#000"
+            android:textSize="@dimen/video_item_duration_txt_size"
+            tools:text="20" />
+
+
+    </RelativeLayout>
+</layout>
