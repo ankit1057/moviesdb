@@ -50,7 +50,7 @@ class FragmentAllVideos : Fragment(), IOnVideoClickedListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        mViewModel.moviesResponse.observe(this, Observer<PagedList<MovieModel?>> { setAdapterData(it) })
+        mViewModel.moviesResponse.observe(this, Observer<PagedList<MovieModel>> { setAdapterData(it) })
         mViewModel.onErrorOccurred.observe(this, Observer<ErrorModel> { setError(it) })
     }
 
@@ -61,7 +61,7 @@ class FragmentAllVideos : Fragment(), IOnVideoClickedListener {
 
     }
 
-    private fun setAdapterData(pageList: PagedList<MovieModel?>) {
+    private fun setAdapterData(pageList: PagedList<MovieModel>) {
         mAdapter.submitList(pageList)
     }
 
